@@ -1,0 +1,87 @@
+Usage: dspace [command-name] {parameters}
+
+Commands from launcher.xml
+ - anonymize-statistics: Anonymize the ip values of the solr statistics
+ - bitstore-migrate: Assetstore migration tool
+ - checker: Run the checksum checker
+ - checker-emailer: Send emails related to the checksum checker
+ - classpath: Calculate and display the DSpace classpath
+ - cleanup: Remove deleted bitstreams from the assetstore
+ - community-filiator: Tool to manage community and sub-community relationships
+ - create-administrator: Create a DSpace administrator account
+ - database: Perform database tasks like test database connection, migrate/repair database, remove database
+ - doi-organiser: Run the DOI organiser
+ - dsprop: View a DSpace property from dspace.cfg
+ - dsrun: Run a class directly
+ - embargo-lifter: Embargo manager tool used to check, list and lift embargoes
+ - generate-sitemaps: Generate search engine and html sitemaps
+ - harvest: Manage the OAI-PMH harvesting of external collections
+ - healthcheck: Create health check report
+ - iiif-canvas-dimensions: Automatically add the IIIF canvas width/height metadata to Bitstreams of IIIF enabled Items.
+ - index-authority: Indexes all metadata fields that use solr authority
+ - index-deduplication: Update Deduplication Solr Search Index
+ - initialize-entities: Initialize the entities with a provided xml
+ - initialize-only-entity-types: Initialize only the entity types as needed by DSpace-CRIS
+ - itemupdate: Item update tool for altering metadata and bitstream content in items
+ - make-handle-config: Run the handle server simple setup command
+ - migrate-embargo: Embargo manager tool used to migrate old version of Embargo to the new one included in dspace3
+ - oai: OAI script manager
+ - packager: Execute a packager
+ - rdfizer: The RDFizer manages the attached triple store if dspace-rdf is enabled
+ - read: Execute a stream of 'dspace' commands from a file or pipe
+ - registry-loader: Load entries into a registry
+ - retry-tracker: Retry all failed commits to the OpenURLTracker
+ - solr-export-statistics: Export usage statistics data from Solr for back-up purposes
+ - solr-import-statistics: Import usage statistics data (as previously exported using solr-export-statistics) into Solr
+ - solr-reindex-statistics: Reindex the Solr-based usage statistics, for example after an upgrade that changes the schema
+ - solr-upgrade-statistics-6x: Upgrade statistics (integer to UUID) to DSpace 6.x (or above) compatibility
+ - stat-general: Compile the general statistics
+ - stat-initial: Compile the initial statistics
+ - stat-monthly: Compile the monthly statistics
+ - stat-report-general: Create the general statistics report
+ - stat-report-initial: Create the initial statistics report
+ - stat-report-monthly: Create the monthly statistics report
+ - stats-log-converter: Convert dspace.log files ready for import into solr statistics
+ - stats-log-importer: Import previously converted log files into solr statistics
+ - stats-util: Statistics Client for Maintenance of Solr Statistics Indexes
+ - structure-builder: Build DSpace community and collection structure
+ - test-email: Test the DSpace email server settings are OK
+ - update-handle-prefix: Update handle records and metadata when moving from one handle to another
+ - user: Manipulate a normal user account
+ - validate-date: interactively validate date values against the multi-format date parser (good for testing custom regular expression configurations)
+ - version: Display the version of DSpace and other troubleshooting information
+
+Commands from script service
+ - bulk-access-control: Bulk access control
+ - bulk-import: Perform the bulk import of an excel file with a list of item to add, update or remove
+ - bulk-item-export: Perform the multiple items export in the given format
+ - collection-export: Perform the export of all the archived items of the given collection in xls format
+ - cris-layout-tool: Script to import CRIS layout configuration from excel file
+ - curate: Curation tasks
+ - export: Batch Export to Simple Archive Format (SAF)
+ - export-cris-layout-tool: Script to export CRIS layout configuration into excel file
+ - export-schema: Exports a given schema into target registry file specified
+ - filter-media: Perform the media filtering to extract full text from documents and to create thumbnails
+ - harvest: Manage the OAI-PMH harvesting of external collections
+ - import: Batch Import from Simple Archive Format (SAF)
+ - import-openaire-events: Import new Openaire quality assurance broker events
+ - import-openaire-suggestions: Imports suggestions from OpenAIRE for publication claim
+ - import-publications: Perform the creating of workspace item using external sources (i.e. Scopus, WebOfScience)
+ - index-discovery: Update Discovery Solr Search Index
+ - item-enhancer: Script that allows to enhance all items
+ - item-export: Perform the item export in the given format
+ - metadata-deletion: Delete all the values of the specified metadata field
+ - metadata-export: Export metadata for batch editing
+ - metadata-export-search: export metadata from a discovery search
+ - metadata-import: Import metadata after batch editing
+ - orcid-bulk-pull: Perform a bulk pull from the ORCID registry for all the profiles with an ORCID id set
+ - orcid-bulk-push: Perform the bulk synchronization of all the BATCH configured ORCID entities placed in the ORCID queue
+ - process-cleaner: Cleanup all the old processes in the specified state
+ - retry-tracker: Retry all failed commits to the OpenURLTracker
+ - solr-database-resync: Update the database status of Items in solr
+ - store-metrics: Perform the metrics storage
+ - submission-forms-migrate: Script for migrating submission forms to DSpace 7
+ - subscription-send: Send emails related to Community/Collection/Item subscriptions
+ - update-item-references: Perform the resolution of authority references
+ - update-metrics: Perform the metrics update using external source, taking first items that have been updated less recently
+ - update-metrics-in-solr: Perform the metrics update in SOLR documents

@@ -1,0 +1,1000 @@
+  278  df -h
+  279  tail -f /dspace/log/dspace-cli.log
+  280  vim /dspace/log/dspace-cli.log
+  281  cd /dspace/
+  282  /dspace/bin/dspace solr-import-statistics -a import -i statistics   -f /var/lib/pgsql/data/logs/tmp/statistics_export_2021-10_001.csv 2>&1 | tail -20
+  283  curl "http://localhost:8983/solr/statistics/select?q=*:*&rows=0&facet=true&facet.field=year&wt=json" | python3 -m json.tool | grep -A50 "facet_fields"
+  284  JAVA_OPTS="-Xmx4g -Xms2g" bin/dspace stats-util -b
+  285  systemctl status postgresql
+  286  history | grep postgres
+  287  sudo systemctl status postgresql-14
+  288  sudo systemctl start postgresql-14
+  289  sudo systemctl status postgresql-14
+  290  sudo mkdir -p /var/lib/GeoIP
+  291  cd /var/lib/GeoIP
+  292  sudo wget https://git.io/GeoLite2-City.mmdb -O GeoLite2-City.mmdb
+  293  sudo chown -R tomcat:tomcat /var/lib/GeoIP
+  294  cd /dspace/
+  295  grep -r 'http://localhost:8080/solr/' *
+  296  pwd
+  297  tail -f /dspace/log/dspace-cli.log
+  298  rm log/dspace-cli.log-2026-02*
+  299  rm log/dspace-cli.log-2026-03*
+  300  grep -r 'http://localhost:8080/solr/' *
+  301  journalctl -u dspace -f
+  302  tail -f /dspace/log/dspace-cli.log
+  303  history
+  304  cd ..
+  305  cd ..
+  306  ls
+  307  cd home/
+  308  ls
+  309  cd library/
+  310  ls
+  311  cd ..
+  312  cd ..
+  313  cd dspace/
+  314  ls
+  315  cd bin/
+  316  ls
+  317  vim fff.sh 
+  318  :q!
+  319  ls
+  320  find / -type f -name "*.py" 2>/dev/null
+  321  find /var/lib/pgsql/ -type f -name "*.py" 2>/dev/null
+  322  mkdir /dspace/assetstore/backup/logs
+  323  mkdir -p /dspace/assetstore/backup/logs
+  324  mv /var/lib/pgsql/data/logs/*.log /dspace/assetstore/backup/logs/
+  325  cd /var/lib/pgsql/data/logs/
+  326  ls
+  327  ls -ltr
+  328  vim import_statistic.py 
+  329  ls -ltr
+  330  vim import_statistics.py 
+  331  ::;:AD:rasdfglz;',erodfgklmvz;tq!tistics.py 
+  332  history | grep python
+  333  ls
+  334  python import_statistic.py --csv-dir /var/lib/pgsql/data/logs/tmp --log-dir /var/lib/pgsql/data/logs --dspace-bin /dspace/bin/dspace
+  335  python3 import_statistics.py --csv-dir /var/lib/pgsql/data/logs/tmp --log-dir /var/lib/pgsql/data/logs --dspace-bin /dspace/bin/dspace
+  336  python3 /home/library/import_statistics.py --csv-dir /var/lib/pgsql/data/logs/tmp --log-dir /var/lib/pgsql/data/logs --dspace-bin /dspace/bin/dspace
+  337  cd /dspace/
+  338  vi /dspace/config/local.cfg
+  339  grep -i solr /dspace/config/local.cfg
+  340  vi /home/library/import_statistics.py 
+  341  ls /var/lib/pgsql/data/logs/tmp/statistics_export_2021-10_000.csv
+  342  ls /var/lib/pgsql/data/logs/tmp/
+  343  mv /var/lib/pgsql/data/logs/tmp/.*csv_migrated.csv /dspace/assetstore/backup/logs/
+  344  mv /var/lib/pgsql/data/logs/tmp/*csv_migrated.csv /dspace/assetstore/backup/logs/
+  345  vim /home/library/import_statistics.py 
+  346  ls -ltr /var/lib/pgsql/data/logs/tmp
+  347  python3 /home/library/import_statistics.py --csv-dir /var/lib/pgsql/data/logs/tmp --log-dir /var/lib/pgsql/data/logs --dspace-bin /dspace/bin/dspace
+  348  ls /var/lib/pgsql/data/logs/tmp/
+  349  ls /var/lib/pgsql/data/logs
+  350  cd /var/lib/pgsql/data/logs
+  351  ls
+  352  vim solr-py.py 
+  353  ls -ltr
+  354  vim solr_importer.py 
+  355  history | grep --remove-fields
+  356  ls
+  357  history | grep solr_importer.py
+  358  ls
+  359  ls -ltr
+  360  vim solr_importer.py 
+  361  python3 solr_importer.py   --solr-url http://localhost:8983/solr/statistics   --batch-size 500   --fetch-schema   --remove-fields domaindns,_version_   --log-file /dspace/logs/stats_import.log   --split-dir /tmp/solr_splits   /st
+  362  ls 
+  363  python3 solr_importer.py --solr-url http://localhost:8983/solr/statistics --debug --remove-fields domaindns -log-file /var/lib/pgsql/data/logs/stats_import_debug.log statistics-export-0.json 
+  364  python3 solr_importer.py --solr-url http://localhost:8983/solr/statistics --debug --remove-fields domaindns --log-file /var/lib/pgsql/data/logs/stats_import_debug.log statistics-export-0.json 
+  365  python3 solr_importer.py --solr-url http://localhost:8983/solr/statistics --debug --remove-fields domaindns --log-file /var/lib/pgsql/data/logs/stats_import_debug.log statistics-export-10000000.json 
+  366  python3 solr_importer.py --solr-url http://localhost:8983/solr/statistics --debug --remove-fields domaindns --log-file /var/lib/pgsql/data/logs/stats_import_debug.log statistics-export-15000000.json 
+  367  ls
+  368  python3 solr_importer.py --solr-url http://localhost:8983/solr/statistics --debug --remove-fields domaindns --log-file /var/lib/pgsql/data/logs/stats_import_debug.log statistics-export-20000000.json 
+  369  python3 solr_importer.py --solr-url http://localhost:8983/solr/statistics --debug --remove-fields domaindns --log-file /var/lib/pgsql/data/logs/stats_import_debug.log statistics-export-25000000.json 
+  370  python3 solr_importer.py --solr-url http://localhost:8983/solr/statistics --debug --remove-fields domaindns --log-file /var/lib/pgsql/data/logs/stats_import_debug.log statistics-export-5000000.json 
+  371  ls
+  372  ls -ltr
+  373  vim stats_import_debug.log 
+  374  tail -190 stats_import_debug.log 
+  375  ld -ltr /tmp/
+  376  ls -ltr /tmp/
+  377  du -sh /tmp/*
+  378  curl "http://localhost:8983/solr/statistics/select?q=*:*&rows=0&facet=true&facet.field=year&wt=json" | python3 -m json.tool | grep -A50 "facet_fields"
+  379  curl "http://localhost:8983/solr/admin/cores?action=STATUS&core=statistics&wt=json" | grep -E '"name"|"instanceDir"|"uptime"'
+  380  curl "http://localhost:8983/solr/admin/cores?action=STATUS" | grep -o '"name":"[^"]*"'
+  381  curl "http://localhost:8983/solr/statistics/select?q=*:*&rows=0&wt=json" | jq '.response.numFound'
+  382  curl "http://localhost:8983/solr/statistics/select?q=*:*&rows=0&wt=json" | grep '"numFound"'
+  383  ls -ltr for f in /var/lib/pgsql/data/logs/tmp/*.csv; do
+  384    sudo -u tomcat /dspace/bin/dspace solr-import -a import -i statistics -f "$f"
+  385  ls  /var/lib/pgsql/data/logs/tmp/
+  386  pwd
+  387  cd /dspace/bin/
+  388  ls
+  389  ./import_all.sh 
+  390  history | grep python
+  391  python3 import_statistic.py --csv-dir /var/lib/pgsql/data/logs/tmp --log-dir /var/lib/pgsql/data/logs --dspace-bin /dspace/bin/dspace
+  392  python3 /home/library/import_statistics.py --csv-dir /var/lib/pgsql/data/logs/tmp --log-dir /var/lib/pgsql/data/logs --dspace-bin /dspace/bin/dspace
+  393  for f in /var/lib/pgsql/data/logs/tmp/*.csv; do   sudo -u tomcat /dspace/bin/dspace solr-import -a import -i statistics -f "$f"; done
+  394  for f in /var/lib/pgsql/data/logs/tmp/*.csv; do /dspace/bin/dspace solr-import-statistics -a import -i statistics -f "$f"; done
+  395  /dspace/bin/dspace solr-import-statistics -h
+  396  history | grep JAVA
+  397  sudo -u tomcat /dspace/bin/dspace solr-import-statistics -i statistics -d /var/lib/pgsql/data/logs/tmp -c
+  398  /dspace/bin/dspace stats-util -b
+  399  ls -ltr
+  400  vim fff.sh 
+  401  cd /var/lib/pgsql/
+  402  ls
+  403  cd data/
+  404  ls
+  405  cd logs/
+  406  ls
+  407  vim solr-imp.sh 
+  408  ls
+  409  ls
+  410  vim ssolr.sh 
+  411  vim ssolr.sh 
+  412  vim /home/library/import_statistics.py 
+  413  pwd
+  414  pwd
+  415  python3 /home/library/import_statistics.py --csv-dir /var/lib/pgsql/data/logs/tmp --log-dir /var/lib/pgsql/data/logs --dspace-bin /dspace/bin/dspace
+  416  python3 /home/library/import_statistics.py --csv-dir /var/lib/pgsql/data/logs/tmp --log-dir /var/lib/pgsql/data/logs --dspace-bin /dspace/bin/dspace
+  417  # Check what type owningItem is defined as in your current core
+  418  curl http://localhost:8983/solr/statistics/schema/fields/owningItem
+  419  curl -X POST http://localhost:8983/solr/statistics/schema   -H 'Content-Type: application/json'   -d '{
+  420      "replace-field": {
+  421        "name": "owningItem",
+  422        "type": "strings",
+  423        "indexed": true,
+  424        "stored": true,
+  425        "multiValued": true
+  426      }
+  427    }'
+  428  curl "http://localhost:8983/solr/admin/cores?action=RELOAD&core=statistics"
+  429  curl http://localhost:8983/solr/statistics/schema/fields/owningItem
+  430  curl http://localhost:8983/solr/statistics/schema/fields | grep -E '"name"|"type"' | paste - - | grep -E 'owning|collection|community|bundle'
+  431  curl -X POST http://localhost:8983/solr/statistics/schema   -H 'Content-Type: application/json'   -d '{
+  432      "replace-field": [
+  433        {
+  434          "name": "owningColl",
+  435          "type": "strings",
+  436          "indexed": true,
+  437          "stored": true,
+  438          "multiValued": true
+  439        },
+  440        {
+  441          "name": "owningComm",
+  442          "type": "strings",
+  443          "indexed": true,
+  444          "stored": true,
+  445          "multiValued": true
+  446        }
+  447      ]
+  448    }'
+  449  curl "http://localhost:8983/solr/admin/cores?action=RELOAD&core=statistics"
+  450  curl -s http://localhost:8983/solr/statistics/schema/fields | grep -E '"name"|"type"' | paste - - | grep -E 'owning|Coll|Comm'
+  451  python3 /home/library/import_statistics.py --csv-dir /var/lib/pgsql/data/logs/tmp --log-dir /var/lib/pgsql/data/logs --dspace-bin /dspace/bin/dspace
+  452  systemctl stop solr
+  453  rm -rf /dspace/solr/statistics/data/index/*
+  454  find /opt/solr /dspace/solr -name "segments_*" 2>/dev/null
+  455  systemctl start solr
+  456  python3 /home/library/import_statistics.py --csv-dir /var/lib/pgsql/data/logs/tmp --log-dir /var/lib/pgsql/data/logs --dspace-bin /dspace/bin/dspace
+  457  curl -s http://localhost:8983/solr/statistics/schema/fields |   grep -E '"name"|"type"' | paste - - | grep 'plong'
+  458  head -1 /var/lib/pgsql/data/logs/tmp/statistics_export_2021-10_000.csv | tr ',' '\n' | nl | grep -E 'actor|epersonid|submitter|type|workflowItemId|fiscalYear|solarYear'
+  459  systemctl stop solr
+  460  rm -rf /dspace/solr/statistics/data/index/*
+  461  curl "http://localhost:8983/solr/admin/cores?action=RELOAD&core=statistics"
+  462  systemctl start solr
+  463  curl "http://localhost:8983/solr/admin/cores?action=RELOAD&core=statistics"
+  464  python3 /home/library/import_statistics.py --csv-dir /var/lib/pgsql/data/logs/tmp --log-dir /var/lib/pgsql/data/logs --dspace-bin /dspace/bin/dspace
+  465  curl -s http://localhost:8983/solr/statistics/schema/fields |   grep -E '"name"|"type"' | paste - - | grep 'plong'
+  466  # Get column positions
+  467  head -1 /var/lib/pgsql/data/logs/tmp/statistics_export_2021-10_000.csv | tr ',' '\n' | nl | grep -E 'actor|epersonid|submitter|type|workflowItemId|fiscalYear|solarYear'
+  468  # Then sample actual values (replace col numbers with what you find above)
+  469  awk -F',' 'NR>=2 && NR<=6 {print NR": actor="$COL1" epersonid="$COL2" type="$COL3}'   /var/lib/pgsql/data/logs/tmp/statistics_export_2021-10_000.csv
+  470  curl -X POST http://localhost:8983/solr/statistics/schema   -H 'Content-Type: application/json'   -d '{
+  471      "replace-field": [
+  472        {"name": "epersonid",      "type": "string",  "indexed": true, "stored": true, "multiValued": false},
+  473        {"name": "actor",          "type": "string",  "indexed": true, "stored": true, "multiValued": false},
+  474        {"name": "submitter",      "type": "string",  "indexed": true, "stored": true, "multiValued": false},
+  475        {"name": "workflowItemId", "type": "string",  "indexed": true, "stored": true, "multiValued": false}
+  476      ]
+  477    }'
+  478  rm -rf /dspace/solr/statistics/data/index/*
+  479  curl "http://localhost:8983/solr/admin/cores?action=RELOAD&core=statistics"
+  480  systemctl start solr
+  481  curl "http://localhost:8983/solr/admin/cores?action=RELOAD&core=statistics"
+  482  curl "http://localhost:8983/solr/admin/cores?action=RELOAD&core=statistics"
+  483  rm -rf /dspace/solr/statistics/data/index/*
+  484  curl "http://localhost:8983/solr/admin/cores?action=RELOAD&core=statistics"
+  485  systemctl start solr
+  486  python3 /home/library/import_statistics.py --csv-dir /var/lib/pgsql/data/logs/tmp --log-dir /var/lib/pgsql/data/logs --dspace-bin /dspace/bin/dspace
+  487  tail -177 /dspace/log/dspace-cli.log
+  488  /dspace/bin/dspace stats-util -b
+  489  tail -177 /dspace/log/dspace-cli.log
+  490  tail -377 /dspace/log/dspace-cli.log
+  491  python3 /home/library/import_statistics.py --csv-dir /var/lib/pgsql/data/logs/tmp --log-dir /var/lib/pgsql/data/logs --dspace-bin /dspace/bin/dspace
+  492  tail -377 /opt/solr/logs/solr.log
+  493  vim /dspace/log/dspace-cli.log
+  494  vim /home/library/import_statistics.py
+  495  ls -ltr /var/lib/pgsql/data/logs
+  496  vim /var/lib/pgsql/data/logs/import_statistics_20260325_202710.log 
+  497  vim /home/library/import_stats.py 
+  498  python3 /home/library/import_stats.py --csv-dir /var/lib/pgsql/data/logs/tmp --log-dir /var/lib/pgsql/data/logs --dspace-bin /dspace/bin/dspace
+  499  vim /home/library/import_stat.py 
+  500  vi /home/library/import_stat.py 
+  501  cd /home/library/import_statistics.py /home/library/import_statss.py
+  502  mv /home/library/import_statistics.py /home/library/import_statss.py
+  503  python3 /home/library/import_statistics.py --csv-dir /var/lib/pgsql/data/logs/tmp --log-dir /var/lib/pgsql/data/logs --dspace-bin /dspace/bin/dspace
+  504  head -5 /var/lib/pgsql/data/logs/tmp/statistics_export_2021-10_003.csv
+  505  file /var/lib/pgsql/data/logs/tmp/statistics_export_2021-10_003.csv
+  506  hexdump -C /var/lib/pgsql/data/logs/tmp/statistics_export_2021-10_003.csv | head -2
+  507  grep -Pc '\x00' /var/lib/pgsql/data/logs/tmp/statistics_export_2021-10_003.csv
+  508  wc -l /var/lib/pgsql/data/logs/tmp/statistics_export_2021-10_003.csv
+  509  wc -c /var/lib/pgsql/data/logs/tmp/statistics_export_2021-10_003.csv
+  510  cat -A /var/lib/pgsql/data/logs/tmp/statistics_export_2021-10_003.csv | head -5
+  511  tail -5 /var/lib/pgsql/data/logs/tmp/statistics_export_2021-10_003.csv
+  512  hexdump -C /var/lib/pgsql/data/logs/tmp/statistics_export_2021-10_003.csv | tail -5
+  513  curl "http://localhost:8983/solr/statistics/admin/ping"
+  514  curl "http://localhost:8983/solr/statistics/schema/fields" | python3 -m json.tool | head -40
+  515  /dspace/bin/dspace version 2>/dev/null || cat /dspace/config/dspace.cfg | grep -i version | head -5
+  516  ls -ltr /home/
+  517  ls -ltr /home/library/
+  518  ls -ltr /var/lib/pgsql/
+  519  ls -ltr /var/lib/pgsql/14/
+  520  ls -ltr /var/lib/pgsql/stats/
+  521  ls -ltr /var/lib/pgsql/stats/data
+  522  ls -ltr /var/lib/pgsql/
+  523  ls -ltr /var/lib/pgsql/data/
+  524  ls -ltr /var/lib/pgsql/data/logs/
+  525  ls -ltrh /var/lib/pgsql/data/logs/
+  526  python3 solr_importer.py --solr-url http://localhost:8983/solr/statistics --debug --remove-fields domaindns --log-file /var/lib/pgsql/data/logs/stats_import_debug.log statistics-export.json 
+  527  python3 solr_importer.py --solr-url http://localhost:8983/solr/statistics --debug --remove-fields domaindns --log-file /var/lib/pgsql/data/logs/stats_import_debug.log statistics-export-0.json 
+  528  python3 solr_importer.py --solr-url http://localhost:8983/solr/statistics --debug --remove-fields domaindns --log-file /var/lib/pgsql/data/logs/stats_import_debug.log statistics-export-10000000.json 
+  529  python3 solr_importer.py --solr-url http://localhost:8983/solr/statistics --debug --remove-fields domaindns --log-file /var/lib/pgsql/data/logs/stats_import_debug.log statistics-export-15000000.json 
+  530  python3 solr_importer.py --solr-url http://localhost:8983/solr/statistics --debug --remove-fields domaindns --log-file /var/lib/pgsql/data/logs/stats_import_debug.log statistics-export-2000000.json 
+  531  python3 solr_importer.py --solr-url http://localhost:8983/solr/statistics --debug --remove-fields domaindns --log-file /var/lib/pgsql/data/logs/stats_import_debug.log statistics-export-20000000.json 
+  532  python3 solr_importer.py --solr-url http://localhost:8983/solr/statistics --debug --remove-fields domaindns --log-file /var/lib/pgsql/data/logs/stats_import_debug.log statistics-export-25000000.json 
+  533  python3 solr_importer.py --solr-url http://localhost:8983/solr/statistics --debug --remove-fields domaindns --log-file /var/lib/pgsql/data/logs/stats_import_debug.log statistics-export-5000000.json 
+  534  df -h
+  535  systemctl restart solr
+  536  sudo reboot
+  537  screen -d
+  538  screen -d
+  539  screen -r 5238.pts-0.blv-dspace04
+  540  screen -r 5238.pts-0.blv-dspace04
+  541  screen -r 68842.pts-0.blv-dspace04
+  542  screen -ls
+  543  screen -x
+  544  screen -r 68842.pts-0.blv-dspace04
+  545  screen -r 68842.pts-0.blv-dspace04
+  546  screen -r 5238.pts-0.blv-dspace04
+  547  screen -D
+  548  screen -D -r 68842
+  549  screen -D -r 5238
+  550  screen
+  551  cd /dspace/solr-export/
+  552  cat > /dspace/solr-export/import.sh << 'EOF'
+  553  #!/bin/bash
+  554  IMPORT_DIR="/dspace/solr-export"
+  555  DONE_FILE="$IMPORT_DIR/.imported_files"
+  556  LOG_FILE="$IMPORT_DIR/import_$(date +%Y%m%d_%H%M%S).log"
+  557  # Create done file if it doesn't exist
+  558  touch "$DONE_FILE"
+  559  echo "Starting import at $(date)" | tee -a "$LOG_FILE"
+  560  echo "Log: $LOG_FILE"
+  561  SUCCESS=0
+  562  SKIPPED=0
+  563  FAILED=0
+  564  EMPTY=0
+  565  for f in $(ls "$IMPORT_DIR"/statistics_export_*.csv 2>/dev/null | sort); do
+  566      filename=$(basename "$f")
+  567      # Skip empty files
+  568      if [ ! -s "$f" ]; then
+  569          echo "[SKIP-EMPTY] $filename" | tee -a "$LOG_FILE"
+  570          ((EMPTY++))
+  571          continue
+  572      fi
+  573      # Skip already imported files
+  574      if grep -qx "$filename" "$DONE_FILE"; then
+  575          echo "[SKIP-DONE]  $filename" | tee -a "$LOG_FILE"
+  576          ((SKIPPED++))
+  577          continue
+  578      fi
+  579      # Check file has more than just a header line
+  580      linecount=$(wc -l < "$f")
+  581      if [ "$linecount" -lt 2 ]; then
+  582          echo "[SKIP-HEADER-ONLY] $filename ($linecount lines)" | tee -a "$LOG_FILE"
+  583          ((EMPTY++))
+  584          continue
+  585      fi
+  586      echo "[IMPORTING] $filename ($linecount lines)..." | tee -a "$LOG_FILE"
+  587      # Copy to import dir as the tool expects one file at a time
+  588      cp "$f" "$IMPORT_DIR/${filename}"
+  589      # Run import
+  590      output=$(sudo -u tomcat /dspace/bin/dspace solr-import-statistics -f "$f" 2>&1)
+  591      exit_code=$?
+  592      if echo "$output" | grep -qi "exception\|error"; then
+  593          echo "[FAILED]    $filename" | tee -a "$LOG_FILE"
+  594          echo "            $output" | tee -a "$LOG_FILE"
+  595          ((FAILED++))
+  596      else
+  597          echo "[SUCCESS]   $filename" | tee -a "$LOG_FILE"
+  598          echo "$filename" >> "$DONE_FILE"
+  599          ((SUCCESS++))
+  600      fi
+  601  done
+  602  echo "-----------------------------------" | tee -a "$LOG_FILE"
+  603  echo "Done at $(date)" | tee -a "$LOG_FILE"
+  604  echo "Success: $SUCCESS | Skipped: $SKIPPED | Empty: $EMPTY | Failed: $FAILED" | tee -a "$LOG_FILE"
+  605  # Final record count
+  606  COUNT=$(curl -s "http://localhost:8983/solr/statistics/select?q=*:*&rows=0" | python3 -m json.tool | grep numFound | awk '{print $2}' | tr -d ',')
+  607  echo "Total Solr records now: $COUNT" | tee -a "$LOG_FILE"
+  608  EOF
+  609  chmod +x /dspace/solr-export/import.sh
+  610  ls -la /dspace/solr-export/
+  611  find /dspace/solr-export/ -name "*.csv" -empty
+  612  wc -l /dspace/solr-export/*.csv | sort -n | head -20
+  613  cat > /dspace/solr-export/import.sh << 'EOF'
+  614  #!/bin/bash
+  615  IMPORT_DIR="/dspace/solr-export"
+  616  DONE_FILE="$IMPORT_DIR/.imported_files"
+  617  LOG_FILE="$IMPORT_DIR/import_$(date +%Y%m%d_%H%M%S).log"
+  618  touch "$DONE_FILE"
+  619  echo "Starting import at $(date)" | tee -a "$LOG_FILE"
+  620  SUCCESS=0
+  621  SKIPPED=0
+  622  FAILED=0
+  623  EMPTY=0
+  624  for f in $(ls "$IMPORT_DIR"/*.csv 2>/dev/null | sort); do
+  625      filename=$(basename "$f")
+  626      # Skip empty files
+  627      if [ ! -s "$f" ]; then
+  628          echo "[SKIP-EMPTY]        $filename" | tee -a "$LOG_FILE"
+  629          ((EMPTY++))
+  630          continue
+  631      fi
+  632      # Skip header-only files (1 line = just header, no data)
+  633      linecount=$(wc -l < "$f")
+  634      if [ "$linecount" -lt 2 ]; then
+  635          echo "[SKIP-HEADER-ONLY]  $filename ($linecount lines)" | tee -a "$LOG_FILE"
+  636          ((EMPTY++))
+  637          continue
+  638      fi
+  639      # Skip already imported files
+  640      if grep -qx "$filename" "$DONE_FILE"; then
+  641          echo "[SKIP-DONE]         $filename" | tee -a "$LOG_FILE"
+  642          ((SKIPPED++))
+  643          continue
+  644      fi
+  645      echo "[IMPORTING]         $filename ($linecount lines)..." | tee -a "$LOG_FILE"
+  646      output=$(sudo -u tomcat /dspace/bin/dspace solr-import-statistics -f "$f" 2>&1)
+  647      exit_code=$?
+  648      if echo "$output" | grep -qi "exception\|error"; then
+  649          echo "[FAILED]            $filename" | tee -a "$LOG_FILE"
+  650          echo "                    $output" | tee -a "$LOG_FILE"
+  651          ((FAILED++))
+  652      else
+  653          echo "[SUCCESS]           $filename" | tee -a "$LOG_FILE"
+  654          echo "$filename" >> "$DONE_FILE"
+  655          ((SUCCESS++))
+  656      fi
+  657  done
+  658  echo "-----------------------------------" | tee -a "$LOG_FILE"
+  659  echo "Done at $(date)" | tee -a "$LOG_FILE"
+  660  echo "Success: $SUCCESS | Skipped: $SKIPPED | Empty: $EMPTY | Failed: $FAILED" | tee -a "$LOG_FILE"
+  661  COUNT=$(curl -s "http://localhost:8983/solr/statistics/select?q=*:*&rows=0" \
+  662      | python3 -m json.tool | grep numFound | awk '{print $2}' | tr -d ',')
+  663  echo "Total Solr records now: $COUNT" | tee -a "$LOG_FILE"
+  664  EOF
+  665  chmod +x /dspace/solr-export/import.sh
+  666  cat > /dspace/solr-export/import.sh << 'EOF'
+  667  #!/bin/bash
+  668  IMPORT_DIR="/dspace/solr-export"
+  669  DONE_FILE="$IMPORT_DIR/.imported_files"
+  670  LOG_FILE="$IMPORT_DIR/import_$(date +%Y%m%d_%H%M%S).log"
+  671  touch "$DONE_FILE"
+  672  echo "Starting import at $(date)" | tee -a "$LOG_FILE"
+  673  SUCCESS=0
+  674  SKIPPED=0
+  675  FAILED=0
+  676  EMPTY=0
+  677  for f in $(ls "$IMPORT_DIR"/*.csv 2>/dev/null | sort); do
+  678      filename=$(basename "$f")
+  679      # Skip empty files
+  680      if [ ! -s "$f" ]; then
+  681          echo "[SKIP-EMPTY]        $filename" | tee -a "$LOG_FILE"
+  682          ((EMPTY++))
+  683          continue
+  684      fi
+  685      # Skip header-only files (1 line = just header, no data)
+  686      linecount=$(wc -l < "$f")
+  687      if [ "$linecount" -lt 2 ]; then
+  688          echo "[SKIP-HEADER-ONLY]  $filename ($linecount lines)" | tee -a "$LOG_FILE"
+  689          ((EMPTY++))
+  690          continue
+  691      fi
+  692      # Skip already imported files
+  693      if grep -qx "$filename" "$DONE_FILE"; then
+  694          echo "[SKIP-DONE]         $filename" | tee -a "$LOG_FILE"
+  695          ((SKIPPED++))
+  696          continue
+  697      fi
+  698      echo "[IMPORTING]         $filename ($linecount lines)..." | tee -a "$LOG_FILE"
+  699      output=$(sudo -u tomcat /dspace/bin/dspace solr-import-statistics -f "$f" 2>&1)
+  700      exit_code=$?
+  701      if echo "$output" | grep -qi "exception\|error"; then
+  702          echo "[FAILED]            $filename" | tee -a "$LOG_FILE"
+  703          echo "                    $output" | tee -a "$LOG_FILE"
+  704          ((FAILED++))
+  705      else
+  706          echo "[SUCCESS]           $filename" | tee -a "$LOG_FILE"
+  707          echo "$filename" >> "$DONE_FILE"
+  708          ((SUCCESS++))
+  709      fi
+  710  done
+  711  echo "-----------------------------------" | tee -a "$LOG_FILE"
+  712  echo "Done at $(date)" | tee -a "$LOG_FILE"
+  713  echo "Success: $SUCCESS | Skipped: $SKIPPED | Empty: $EMPTY | Failed: $FAILED" | tee -a "$LOG_FILE"
+  714  COUNT=$(curl -s "http://localhost:8983/solr/statistics/select?q=*:*&rows=0" \
+  715      | python3 -m json.tool | grep numFound | awk '{print $2}' | tr -d ',')
+  716  echo "Total Solr records now: $COUNT" | tee -a "$LOG_FILE"
+  717  EOF
+  718  chmod +x /dspace/solr-export/import.sh
+  719  ls /dspace/solr-export/*.csv | wc -l
+  720  ls /dspace/solr-export/*.csv | wc -l
+  721  ls /dspace/solr-export/ | grep -v "_migrated" | grep ".csv"
+  722  wc -l /dspace/solr-export/*.csv | sort -rn | head -20
+  723  ls /dspace/solr-export/*.csv | wc -l
+  724  find /dspace/solr-export/ -name "*.csv" -empty | wc -l
+  725  awk 'FNR==1{count++} END{print count " header-only files"}' /dspace/solr-export/*.csv
+  726  rm /dspace/solr-export/statistics_export_2021-10_715.csv_migrated
+  727  rm /dspace/solr-export/statistics_export_2021-10_715.csv_migrated.csv 
+  728  rm /dspace/solr-export/statistics_export_2021-10_716.csv_migrated.csv 
+  729  bash import.sh 
+  730  # Check what date ranges you have
+  731  ls /dspace/solr-export/*.csv | grep -v migrated | sort | head -20
+  732  ls /dspace/solr-export/*.csv | grep -v migrated | sort | tail -20
+  733  ls /dspace/solr-export/*.csv | grep -v migrated | sort | head -20
+  734  ls /dspace/solr-export/*.csv | grep -v migrated | sort | tail -20
+  735  ls /dspace/solr-export/statistics_export_2025-*.csv | wc -l
+  736  grep -i "domaindns" /opt/solr/server/solr/statistics/conf/schema.xml
+  737  sed -i 's|<field name="dns".*/>|<field name="dns" type="string" indexed="true" stored="true" required="false" />\n    <field name="domaindns" type="string" indexed="true" stored="true" required="false" />|'   /opt/solr/server/solr/statistics/conf/schema.xml
+  738  curl "http://localhost:8983/solr/admin/cores?action=RELOAD&core=statistics"
+  739  curl "http://localhost:8983/solr/statistics/schema/fields/domaindns" | python3 -m json.tool
+  740  grep -i "topdomain" /opt/solr/server/solr/statistics/conf/schema.xml
+  741  sed -i 's|<field name="domaindns".*/>|<field name="domaindns" type="string" indexed="true" stored="true" required="false" />\n    <field name="topdomain" type="string" indexed="true" stored="true" required="false" />|'   /opt/solr/server/solr/statistics/conf/schema.xml
+  742  grep -E "domaindns|topdomain" /opt/solr/server/solr/statistics/conf/schema.xml
+  743  curl "http://localhost:8983/solr/admin/cores?action=RELOAD&core=statistics"
+  744  head -1 /dspace/solr-export/statistics_export_2025-11_00.csv | tr ',' '\n' | sort > /tmp/csv_fields.txt
+  745  grep '<field name=' /opt/solr/server/solr/statistics/conf/schema.xml |   sed 's/.*name="\([^"]*\)".*/\1/' | sort > /tmp/schema_fields.txt
+  746  echo "=== MISSING FROM SCHEMA ==="
+  747  curl "http://localhost:8983/solr/admin/cores?action=RELOAD&core=statistics"
+  748  comm -23 /tmp/csv_fields.txt /tmp/schema_fields.txt
+  749  sed -i 's|</fields>|    <field name="fiscalYear" type="string" indexed="true" stored="true" required="false" />\n    <field name="location" type="location" indexed="true" stored="true" required="false" />\n    <field name="search.uniqueid" type="string" indexed="true" stored="true" required="false" />\n    <field name="solarYear" type="string" indexed="true" stored="true" required="false" />\n</fields>|'   /opt/solr/server/solr/statistics/conf/schema.xml
+  750  grep -E "fiscalYear|location|search.uniqueid|solarYear" /opt/solr/server/solr/statistics/conf/schema.xml
+  751  curl "http://localhost:8983/solr/admin/cores?action=RELOAD&core=statistics"
+  752  grep -i "location\|latlon\|point" /opt/solr/server/solr/statistics/conf/schema.xml | grep "fieldType\|type name"
+  753  sed -i 's|<field name="location" type="location"|<field name="location" type="string"|'   /opt/solr/server/solr/statistics/conf/schema.xml
+  754  curl "http://localhost:8983/solr/admin/cores?action=RELOAD&core=statistics"
+  755  comm -23 /tmp/csv_fields.txt /tmp/schema_fields.txt && echo "ALL FIELDS OK - ready to import"
+  756  vim upgrade_solr.sh
+  757  chmod +x upgrade_solr.sh 
+  758  bash upgrade_solr.sh 
+  759  screen -x
+  760  screen -x
+  761  screen -x
+  762  screen -x
+  763  vim /dspace/config/spring/api/discoveryy.xml
+  764  mv /dspace/config/spring/api/discoveryy.xml /dspace/config/spring/api/discovery.xml 
+  765  chown -R tomcat:tomcat /dspace/config
+  766  chmod -R 777 /dspace/config
+  767  vim /dspace/config/spring/api/discovery.xml 
+  768  vim /dspace/config/spring/api/discovery.xml 
+  769  screen -x
+  770  screen -x
+  771  screen -x
+  772  screen -x
+  773  screen -x
+  774  screen -x
+  775  screen -x
+  776  screen -x
+  777  screen -x
+  778  screen -x
+  779  screen -x
+  780  screen -x
+  781  screen -x
+  782  screen -x
+  783  locate 'angular'
+  784  locate 'angular'
+  785  cd /opt/dspace/
+  786  ls -l
+  787  locate 'angular'
+  788  cd /opt/dspace-angular/
+  789  ls -l
+  790  ls -l /opt/dspace-angular/src/themes/
+  791  ls -l /opt/dspace-angular/src/app/home-page/
+  792  cat /opt/dspace-angular/src/app/home-page/home-page.component.html
+  793  find /opt/dspace-angular/src/themes/custom -type f | sort
+  794  find /opt/dspace-angular/src/themes/dspace -type f | sort
+  795  cat /opt/dspace-angular/src/themes/custom/app/home-page/home-news/home-news.component.html
+  796  cat /opt/dspace-angular/src/themes/dspace/app/home-page/home-news/home-news.component.html
+  797  locate banner.jpg
+  798  ls -l /home/library/
+  799  ls -l /opt/dspace-angular/dist/browser/assets/dspace/images/
+  800  mv banner.webp banner.webp.original
+  801  cd /opt/dspace-angular/dist/browser/assets/dspace/images/
+  802  mv banner.webp banner.webp.original
+  803  cp /home/library/banner.webp .
+  804  cat /opt/dspace-angular/src/themes/custom/app/home-page/home-news/home-news.component.html
+  805  cd /opt/dspace-angular/src/themes/custom/app/home-page/home-news/
+  806  ls -l
+  807  mv home-news.component.html home-news.component.html.orig.16-04-2026
+  808  cat > /opt/dspace-angular/src/themes/custom/app/home-page/home-news/home-news.component.html << 'EOF'
+  809  <div class="background-image-container mt-ncs">
+  810    <div class="container">
+  811      <div class="jumbotron jumbotron-fluid">
+  812      </div>
+  813    </div>
+  814    <picture class="background-image">
+  815      <source type="image/webp" srcset="assets/dspace/images/banner.webp 2000w, assets/dspace/images/banner-half.webp 1200w, assets/dspace/images/banner-tall.webp 768w">
+  816      <source type="image/jpg" srcset="assets/dspace/images/banner.jpg 2000w, assets/dspace/images/banner-half.jpg 1200w, assets/dspace/images/banner-tall.jpg 768w">
+  817      <img alt="" [src]="'assets/dspace/images/banner.jpg'"/>
+  818    </picture>
+  819  </div>
+  820  EOF
+  821  cat home-news.component.html
+  822  exit
+  823  history
+  824  exit
+  825  cd /opt/dspace-angular/dist/browser/assets/dspace/images/
+  826  ls -l
+  827  cp /home/library/banner.jpg .
+  828  exit
+  829  cd /opt/dspace-angular/dist/browser/assets/dspace/images/
+  830  ls -l
+  831  history
+  832  cd /opt/dspace-angular/src/themes/custom/app/home-page/home-news/
+  833  ls -l
+  834  rm -f home-news.component.html
+  835  mv home-news.component.html.orig.16-04-2026 home-news.component.html
+  836  ls -l
+  837  history grep | 'yarn'
+  838  exit
+  839  screen -x
+  840  screen -x
+  841  screen -x
+  842  screen -x
+  843  screen -x
+  844  screen -x
+  845  ls -ltr /home/library/
+  846  ls -ltr /home/library/
+  847  mkdir /home/library/expo
+  848  mv /home/library/statistics_export_2026-04_* /home/library/expo/
+  849  ls -ltr /home/library/
+  850  vim /home/library/import_statistics.py 
+  851  history | grep python
+  852  python3 import_statistic.py --csv-dir /var/lib/pgsql/data/logs/tmp --log-dir /var/lib/pgsql/data/logs --dspace-bin /dspace/bin/dspace
+  853  python3 import_statistic.py --csv-dir /home/library/expo --log-dir /var/lib/pgsql/data/logs --dspace-bin /dspace/bin/dspace
+  854  python3 /home/library/import_statistic.py --csv-dir /home/library/expo --log-dir /var/lib/pgsql/data/logs --dspace-bin /dspace/bin/dspace
+  855  pwd
+  856  ls -ltr /var/lib/pgsql/data/logs/
+  857  ls -ltr /var/lib/pgsql/data/logs/
+  858  vim /var/lib/pgsql/data/logs/import_statistics_20260420_141934.log 
+  859  vim /var/lib/pgsql/data/logs/statistics_export_2026-04_01_import.log
+  860  history 
+  861  vim /dspace/solr-export/import.sh
+  862  vim /dspace/solr-export/import.sh
+  863  vim /dspace/solr-export/import.sh
+  864  mkdir /dspace/solr-export/expo
+  865  mv /home/library/expo/statistics_export_2026-04_* /dspace/solr-export/expo/
+  866  chmod -R 777 /dspace/solr-export/expo
+  867  chown -R tomcat:tomcat /dspace/solr-export/expo
+  868  ls /dspace/solr-export/expo
+  869  vim /dspace/solr-export/import.sh
+  870  history | grep sh
+  871  sh /dspace/solr-export/import.sh 
+  872  history | grep solr
+  873  systemctl start solr
+  874  sh /dspace/solr-export/import.sh 
+  875  service solr restart
+  876  sh /dspace/solr-export/import.sh 
+  877  curl "http://localhost:8983/solr/admin/cores?action=STATUS&wt=json"
+  878  curl "http://localhost:8983/solr/statistics/select?q=*:*&rows=1&wt=json"
+  879  cd /opt/dspace-angular/dist/browser/assets/dspace/images/
+  880  cd ../../..
+  881  cd ../..
+  882  grep -r "DSpace-CRIS has the institutional repository" .
+  883  grep -r "DSpace-CRIS has the institutional repository" 
+  884  yarn build:prod 2>&1 | tail -20
+  885  exit
+  886  screen -x
+  887  screen -x
+  888  screen -x
+  889  screen -x
+  890  tail -f /dspace/log/dspace-cli.log
+  891  vim /dspace/log/dspace-cli.log
+  892  tail -f /dspace/log/dspace-cli.log
+  893  vim /dspace/log/dspace-cli.log
+  894  vim /dspace/log/dspace-cli.log
+  895  tail -f /dspace/log/dspace-cli.log
+  896  tail -f /dspace/log/dspace-cli.log
+  897  tail -150 /dspace/log/dspace.log
+  898  tail -f /dspace/log/dspace.log
+  899  vim /dspace/log/dspace-cli.log
+  900  vim /dspace/log/dspace.log
+  901  tail -f /dspace/log/dspace-cli.log
+  902  tail -f /dspace/log/dspace-cli.log
+  903  tail -f /dspace/log/dspace-cli.log
+  904  tail -f /dspace/log/dspace-cli.log
+  905  tail -f /dspace/log/dspace-cli.log
+  906  tail -f /dspace/log/dspace-cli.log
+  907  tail -f /dspace/log/dspace-cli.log
+  908  ls -ltr /home/library/
+  909  ls -ltr /opt/dspace-angular/src/themes/dspace/
+  910  ls -ltr /opt/dspace-angular/src/themes/dspace/assets/
+  911  ls -ltr /opt/dspace-angular/src/themes/dspace/assets/images/
+  912  mv /opt/dspace-angular/src/themes/dspace/assets/images/banner-half.webp /opt/
+  913  mv /opt/dspace-angular/src/themes/dspace/assets/images/banner-tall.webp /opt/
+  914  cd /home/library/
+  915  mv ETD_BANNER_resizedHalf.png banner-half.png
+  916  mv ETD_BANNER_resizedTall.png banner-tall.png
+  917  mv banner-half.png /opt/dspace-angular/src/themes/dspace/assets/images/
+  918  mv banner-tall.png /opt/dspace-angular/src/themes/dspace/assets/images/
+  919  mv banner.webp  /opt/dspace-angular/src/themes/dspace/assets/images/
+  920  mv banner.webp /opt/dspace-angular/src/themes/dspace/assets/images/
+  921  cd /dspace/
+  922  grep -r 'DSpace-CRIS has the institutional repository' *
+  923  cd /opt/dspace-angular/
+  924  grep -r 'DSpace-CRIS has the institutional repository' *
+  925  grep -r 'DSpace-CRIS' *
+  926  vim src/themes/dspace/app/home-page/home-news/home-news.component.html
+  927  vim src/themes/dspace/app/home-page/home-news/home-news.component.html
+  928  vim src/themes/dspace/app/home-page/home-news/home-news.component.html
+  929  cd /dspace/
+  930  tail -f /dspace/log/dspace-cli.log
+  931  tail -f /dspace/log/dspace-cli.log
+  932  ls -ltr /dspace/solr-export/expo/
+  933  vim /dspace/solr-export/expo/import_20260420_143703.log 
+  934  tail -f /dspace/log/dspace-cli.log
+  935  tail -f /dspace/log/solr.log 
+  936  ls -ltr /dspace/log/
+  937  ls -ltr /dspace/log/
+  938  tail -f /dspace/log/dspace-cli.log
+  939  tail -f /dspace/log/dspace-cli.log
+  940  ls -ltr /dspace/log/
+  941  vim  /dspace/log/dspace-log-monthly-2013-7.dat
+  942  ls -ltr /dspace/log/
+  943  ls -ltr /dspace/log/
+  944  ls -ltr /dspace/log/
+  945  tail -f /dspace/log/dspace-cli.log
+  946  screen -x
+  947  pwd
+  948  screen
+  949  ls -ltr /dspace/log/
+  950  vim /dspace/log/dspace-log-monthly-2014-7.dat
+  951* 
+  952  du -sh /opt/*
+  953  cd /opt/dspace-angular/
+  954  yarn star~t:dev
+  955  yarn start:dev
+  956  lsof -i:4000
+  957  kill -9 13547
+  958  ls -ltr /dspace/log/
+  959  ls -ltr /opt/solr/logs/
+  960  ls -ltrh /opt/solr/logs/
+  961  tail -f /opt/solr/logs/
+  962  tail -f /opt/solr/logs/solr.log
+  963  tail -f /opt/solr/logs/solr_gc.log
+  964  df -h
+  965  du -sh /opt/*
+  966  du -sh /opt/*
+  967  du -sh /*
+  968  df -h
+  969  df -h
+  970  du -sh /opt/solr/*
+  971  du -sh /opt/solr/*
+  972  du -sh /opt/solr/*
+  973  tail -f /opt/solr/logs/solr.log
+  974  tail -f /opt/solr/logs/solr.log
+  975  tail -f /opt/solr/logs/solr.log
+  976  tail -f /opt/solr/logs/solr.log
+  977  tail -f /opt/solr/logs/solr.log
+  978  sudo kill $(ps aux | grep 'stats-util' | grep -v grep | awk '{print $2}')
+  979  sudo -u tomcat /dspace/bin/dspace stat-general
+  980  sudo -u tomcat /dspace/bin/dspace -h
+  981  sudo -u tomcat /dspace/bin/dspace stat-monthly
+  982  sudo -u tomcat /dspace/bin/dspace stat-initial
+  983  sudo -u tomcat /dspace/bin/dspace store-metrics
+  984  lsof -i:4000
+  985  yarn start:dev
+  986  lsof -i:4000
+  987  kill -9 300888
+  988  lsof -i:4000
+  989  yarn start:dev
+  990  lsof -i:4000
+  991  kill -9 357001
+  992  lsof -i:4000
+  993  yarn start:dev
+  994  lsof -i:4000
+  995  kill -9 398597
+  996  yarn start:dev
+  997  lsof -i:4000
+  998  kill -9 400409
+  999  yarn start:dev
+ 1000  lsof -i:4000
+ 1001* kill -9 401600~
+ 1002  yarn start:dev
+ 1003  kill -9 401600
+ 1004  lsof -i:4000
+ 1005  kill -9 402760
+ 1006  yarn start:dev
+ 1007  lsof -i:4000
+ 1008  kill -9 403207
+ 1009  yarn start:dev
+ 1010  lsof -i:4000
+ 1011  kill -9 406231
+ 1012  yarn start:dev
+ 1013  lsof -i:4000
+ 1014  kill -9 473960
+ 1015  yarn start:dev
+ 1016  lsof -i:4000
+ 1017  kill -9 474500
+ 1018  yarn start:dev
+ 1019  lsof -i:4000
+ 1020  kill -9 475692
+ 1021  yarn start:dev
+ 1022  lsof -i:4000
+ 1023  kill -9 481488
+ 1024  yarn start:dev
+ 1025  lsof -i:4000
+ 1026  kill -9 588400
+ 1027  yarn start:dev
+ 1028  lsof -i:4000
+ 1029  kill -9 604713
+ 1030  yarn start:dev
+ 1031  lsof -i:4000
+ 1032  kill -9 606749
+ 1033  yarn start:dev
+ 1034  lsof -i:4000
+ 1035* 
+ 1036  lsof -i:4000
+ 1037  ls -ltr
+ 1038  ls -ltr /dspace/
+ 1039  chown -R tomcat:tomcat /dspace
+ 1040  ls -ltr /dspace/
+ 1041  ls -ltr /dspace/logs
+ 1042  ls -ltr /dspace/log/
+ 1043  tail -199 /dspace/log/dspace.log
+ 1044  lsof -i:4000
+ 1045  tail -199 /dspace/log/dspace.log
+ 1046  ls -ltr /dspace/log/
+ 1047  ls -ltr /dspace/log/
+ 1048  ls -88 /dspace/log/
+ 1049  tail -88 /dspace/log/
+ 1050  tail -88 /dspace/log/dspace.log
+ 1051  tail -488 /dspace/log/dspace.log
+ 1052  xmllint --noout /dspace/config/item-submission.xml 
+ 1053  xmllint --noout /dspace/config/submission-forms.xml 
+ 1054  vim /dspace/config/item-submission.xml 
+ 1055  vim /dspace/config/submission-forms.xml 
+ 1056  cd /dspace/
+ 1057  cd config/
+ 1058  for f in *.xml; do xmllint --noout "$f"; done
+ 1059  xmllint --noout submission-forms.xml
+ 1060  vim submission-forms.xml 
+ 1061  xmllint --noout submission-forms.xml
+ 1062  vim submission-forms.xml 
+ 1063  xmllint --noout submission-forms.xml
+ 1064  ls -ltr /dspace/log/
+ 1065  tail -488 /dspace/log/dspace.log
+ 1066  tail -488 /dspace/log/dspace.log
+ 1067  xmllint --noout submission-forms.xml
+ 1068  vim submission-forms.xml 
+ 1069  xmllint --noout submission-forms.xml
+ 1070  tail -20 submission-forms.xml
+ 1071  vim submission-forms.xml 
+ 1072  xmllint --noout submission-forms.xml
+ 1073  vim submission-forms.xml 
+ 1074  xmllint --noout submission-forms.xml
+ 1075  grep -n "</submission-forms>" submission-forms.xml
+ 1076  sed -n '1450,1495p' submission-forms.xml
+ 1077  vim submission-forms.xml 
+ 1078* 
+ 1079  xmllint --noout submission-forms.xml
+ 1080  vim submission-forms.xml 
+ 1081  xmllint --noout submission-forms.xml
+ 1082  xmllint --noout submission-forms.xml
+ 1083  vim submission-forms.xml 
+ 1084  cp submission-forms.xml /home/library/
+ 1085  cp /home/library/submission-forms.xml /dspace/config/
+ 1086  ls
+ 1087  ls -ltr
+ 1088  chmod 777 submission-forms.xml 
+ 1089  ls -ltr
+ 1090  ls -ltr
+ 1091  vim submission-forms.xml 
+ 1092  xmllint --noout submission-forms.xml
+ 1093  cp item-submission.xml /home/library/
+ 1094  chown library:library /home/library/item-submission.xml 
+ 1095* ls -ltr /home/library/it
+ 1096  vim /dspace/config/submission-forms.xml 
+ 1097  vim /dspace/config/submission-forms.xml 
+ 1098  xmllint --noout submission-forms.xml
+ 1099  vim /dspace/config/item-submission.xml 
+ 1100  vim /dspace/config/item-submission.xml 
+ 1101  history | grep yarn
+ 1102  ls -ltr /dspace/log/
+ 1103  tail -f /dspace/log/dspace.log
+ 1104  vim item-submission.xml 
+ 1105  vim item-submission.xml 
+ 1106  vim item-submission.xml 
+ 1107  locate dspace-server-webapp-cris-2024.02.02.jar
+ 1108  cd /dspace/webapps/server/WEB-INF/lib/
+ 1109  jar tf dspace-server-webapp-cris-2024.02.02.jar | grep -i collectionstep
+ 1110  vim /dspace/config/item-submission.xml 
+ 1111  cd /dspace/config/
+ 1112  cd ..
+ 1113  cd log/
+ 1114  ls -ltr
+ 1115  tail -188 dspace.log
+ 1116  tail -188 dspace.log
+ 1117  tail -188 dspace.log
+ 1118  tail 3188 dspace.log
+ 1119  tail 388 dspace.log
+ 1120  tail -388 dspace.log
+ 1121  vim /dspace/config/item-submission.xml 
+ 1122  vim /dspace/config/item-submission.xml 
+ 1123  vim /dspace/config/item-submission.xml 
+ 1124  ls -ltr /dspace/log/
+ 1125  tail -188 /dspace/log/dspace.log
+ 1126  tail -188 /dspace/log/dspace.log
+ 1127  tail -188 /dspace/log/dspace.log
+ 1128  tail -f /dspace/log/dspace.log
+ 1129  vim /dspace/log/dspace.log
+ 1130  vim /dspace/config/item-submission.xml 
+ 1131  tail -f /dspace/log/dspace.log
+ 1132  tail -120 /dspace/log/dspace.log
+ 1133  vim /dspace/config/item-submission.xml 
+ 1134  tail -120 /dspace/log/dspace.log
+ 1135  vim /dspace/config/item-submission.xml 
+ 1136  tail -120 /dspace/log/dspace.log
+ 1137  vim /dspace/config/item-submission.xml 
+ 1138  tail -120 /dspace/log/dspace.log
+ 1139  vim /dspace/config/item-submission.xml 
+ 1140  tail -120 /dspace/log/dspace.log
+ 1141  tail -120 /dspace/log/dspace.log
+ 1142  vim /dspace/config/item-submission.xml 
+ 1143  vim /dspace/config/item-submission.xml 
+ 1144  vim /dspace/config/item-submission.xml 
+ 1145  vim /dspace/config/item-submission.xml 
+ 1146  vim /dspace/config/item-submission.xml 
+ 1147  vim /dspace/config/item-submission.xml 
+ 1148  vim /dspace/config/item-submission.xml 
+ 1149  ls -ltr /dspace/config/
+ 1150  vim /dspace/config/item-submission.xml 
+ 1151  vim /dspace/config/item-submission.xml 
+ 1152  vim /dspace/config/item-submission.xml 
+ 1153  vim /dspace/config/item-submission.xml 
+ 1154  ls -ltr /dspace/log/
+ 1155  tail -190 /dspace/log/dspace.log
+ 1156  tail -190 /dspace/log/dspace.log
+ 1157  ls -ltr /opt/
+ 1158  history | grep psql
+ 1159  psql -U dspace -d newdb
+ 1160  psql -U postgres -d dspace
+ 1161  sudo su - postgres
+ 1162  cd /dspace/
+ 1163  cd config/
+ 1164  ls
+ 1165  vim item-submission.dtd 
+ 1166* 
+ 1167  vim submission-forms.xml 
+ 1168  history | grep dspace
+ 1169  history | grep system
+ 1170  systemctl restart dspace
+ 1171  vim submission-forms.xml 
+ 1172  systemctl restart dspace
+ 1173  history | grep journ
+ 1174  vim submission-forms.xml 
+ 1175  systemctl restart dspace
+ 1176  ls -ltr /dspace/log/
+ 1177  tail -199 /dspace/log/dspace.log
+ 1178  vim submission-forms.xml 
+ 1179  systemctl restart dspace
+ 1180  vim submission-forms.xml 
+ 1181  systemctl restart dspace
+ 1182  tail -199 /dspace/log/dspace.log
+ 1183  tail -199 /dspace/log/dspace.log
+ 1184  tail -199 /dspace/log/dspace.log
+ 1185  systemctl restart dspace
+ 1186  tail -199 /dspace/log/dspace.log
+ 1187  ls -ltr /dspace/log/
+ 1188  tail -599 /dspace/log/dspace.log
+ 1189  systemctl restart dspace
+ 1190  vim submission-forms.xml 
+ 1191  vim submission-forms.xml 
+ 1192  systemctl restart dspace
+ 1193  vim submission-forms.xml 
+ 1194  systemctl restart dspace
+ 1195  vim submission-forms.xml 
+ 1196  systemctl restart dspace
+ 1197  vim submission-forms.xml 
+ 1198  systemctl restart dspace
+ 1199  systemctl restart dspace
+ 1200  systemctl restart dspace
+ 1201  ls -ltr /dspace/log/dspace.log
+ 1202  vim /dspace/log/dspace.log
+ 1203  su postgres
+ 1204  vim registries/relationship-formats.xml 
+ 1205  ls registries/
+ 1206  cd ../
+ 1207  pwd
+ 1208  ls
+ 1209  ./bin/dspace -h
+ 1210  ./bin/dspace registry-loader -dc config/registries/relationship-formats.xml 
+ 1211  ./bin/dspace registry-loader -m config/registries/relationship-formats.xml
+ 1212  tail -f /dspace/log/dspace-cli.log
+ 1213  vim /dspace/log/dspace-cli.log
+ 1214  su postgres
+ 1215  systemctl restart dspace
+ 1216  ./bin/dspace -h
+ 1217  ./bin/dspace user -h
+ 1218  ./bin/dspace user --add --email boycea@cput.ac.za --password boycea@cput.ac.za --givenname "Amohelang" --surname "Boyce"
+ 1219  ./bin/dspace user --add --email masikot@cput.ac.za --password masikot@cput.ac.za --givenname "Thulani" --surname "Masiko"
+ 1220  ./bin/dspace user --add -h
+ 1221  ./bin/dspace user --add -m masikot@cput.ac.za -p "masikot@cput.ac.za" -g "Thulani" -s "Masiko"
+ 1222  ./bin/dspace user --add -m meyerc@cput.ac.za -p "meyerc@cput.ac.za" -g "Claude Petulia" -s "Meyer"
+ 1223  ./bin/dspace user --add -m boycea@cput.ac.za -p "boycea@cput.ac.za" -g "Amohelang" -s "Boyce"
+ 1224  ./bin/dspace user --list
+ 1225  zzxxcv
+ 1226  
+ 1227  
+ 1228  
+ 1229  ls
+ 1230  
+ 1231  
+ 1232  ./bin/dspace user --list | grep boyce
+ 1233  ./bin/dspace dsrun org.dspace.eperson.GroupManager -l
+ 1234  pwd
+ 1235  ./bin/start-handle-server
+ 1236  ./bin/dspace user --list | grep gertse
+ 1237  ./bin/dspace user --delete --email gertsen@cput.ac.za
+ 1238  ./bin/dspace user --delete --email nobebex@cput.ac.za
+ 1239  pwd
+ 1240  ./bin/dspace user --list | grep nobebe
+ 1241  su postgres
+ 1242  cd /home/library/
+ 1243  tail -f /dspace/log/dspace-cli.log
+ 1244  pwd
+ 1245  cd /dspace/
+ 1246  history | grep index-discovery
+ 1247  chown -R tomcat:tomcat /dspace
+ 1248* 
+ 1249  pwd
+ 1250  ./bin/dspace index-discovery -b
+ 1251  systemctl restart dspace
+ 1252  history 
+ 1253  history | grep scp
+ 1254  pwd
+ 1255  cd /home/library/
+ 1256  scp library@etd.cput.ac.za:/home/library/statistics-may-2026.json .
+ 1257  curl -X POST "http://localhost:8983/solr/statistics/update?commit=true"   -H "Content-Type: application/json"   --data-binary @/home/library/statistics-may-2026.json
+ 1258  jq '.response.docs' /home/library/statistics-may-2026.json   > /home/library/statistics-may-2026-docs.json
+ 1259  ls -ltr 
+ 1260  curl -X POST "http://localhost:8983/solr/statistics/update?commit=true"   -H "Content-Type: application/json"   --data-binary @/home/library/statistics-may-2026-docs.json
+ 1261  curl "http://localhost:8983/solr/statistics/select?q=*:*&rows=0&wt=json"
+ 1262  cd /dspace/
+ 1263  pwd
+ 1264  ./bin/dspace index-discovery -b
+ 1265  ./bin/dspace -h
+ 1266  ./bin/dspace store-metrics -h
+ 1267  ./bin/dspace store-metrics
+ 1268  pwd
+ 1269  ls -ltr
+ 1270  ls -ltr solr-export/
+ 1271  ls -ltr /home/
+ 1272  ls -ltr /home/library/
+ 1273* 
+ 1274  ls
+ 1275  vim rr 
+ 1276  history
+ 1277  history >> pre
