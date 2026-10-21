@@ -59,19 +59,7 @@
           <repeatable>false</repeatable>
           <required>You must enter at least the author.</required>
           <hint>Enter the names of the authors of this item in the form Lastname, Firstname [i.e. Smith, Josh or Smith, J].</hint>
-  </field>
-         <row>
-		       <field>
-		    <dc-schema>dc</dc-schema>
-		    <dc-element>contributor</dc-element>
-		     <dc-qualifier>advisor</dc-qualifier>
-		           <label>Supervisor</label>
-		         <input-type>onebox</input-type>
-		         <repeatable>false</repeatable>
-		         <required>You must enter at least the advisor.</required>
-		        <hint>Enter the names of the advisor of this item in the form Lastname, Firstname [i.e. Smith, Josh or Smith, J].</hint>
-		         </field>
-		       </row>
+        </field>
       </row>
       <row>
         <field>
@@ -227,7 +215,7 @@
           <repeatable>false</repeatable>
           <required>You must enter the kind code.</required>
           <style>col-xs-12 col-md-6</style>
-	  <hint />
+          <hint />
         </field>
         <field>
           <dc-schema>crispatent</dc-schema>
@@ -496,7 +484,7 @@
       <row>
         <field>
           <dc-schema>dc</dc-schema>
-          <dc-element>ubject</dc-element>
+          <dc-element>subject</dc-element>
           <label>Subject Keywords</label>
           <input-type>tag</input-type>
           <repeatable>true</repeatable>
@@ -517,148 +505,92 @@
       </row>
     </form>
     <form name="publication">
-     <row>
-        <field>
-            <dc-schema>dc</dc-schema>
-            <dc-element>identifier</dc-element>
-            <label>Identifiers</label>
-            <input-type value-pairs-name="common_identifiers">qualdrop_value</input-type>
-            <repeatable>true</repeatable>
-            <required />
-            <hint>If the item has any identification numbers or codes associated with it, please enter the types and the actual numbers or codes.</hint>
-        </field>
-    </row>
-    <row>
-        <field>
-            <dc-schema>dc</dc-schema>
-            <dc-element>title</dc-element>
-            <label>Title</label>
-            <input-type>onebox</input-type>
-            <repeatable>false</repeatable>
-            <required>You must enter a main title for this item.</required>
-            <hint>Enter the main title of the item.</hint>
-        </field>
-    </row>
-    <row>
-        <field>
-            <dc-schema>dc</dc-schema>
-            <dc-element>title</dc-element>
-            <dc-qualifier>alternative</dc-qualifier>
-            <label>Other Titles</label>
-            <input-type>onebox</input-type>
-            <repeatable>true</repeatable>
-            <required />
-            <hint>If the item has any alternative titles, please enter them here.</hint>
-        </field>
-    </row>
-    <row>
-        <field>
-            <dc-schema>dc</dc-schema>
-            <dc-element>contributor</dc-element>
-            <dc-qualifier>author</dc-qualifier>
-            <label>Authors</label>
-            <input-type>group</input-type>
-            <repeatable>true</repeatable>
-            <required />
-            <hint>Enter the names of the authors of this item.</hint>
-        </field>
-    </row>
-   <row>
-        <field>
-            <dc-schema>dc</dc-schema>
-            <dc-element>contributor</dc-element>
-            <dc-qualifier>advisor</dc-qualifier>
-            <label>Supervisor / Advisor</label>
-            <input-type>onebox</input-type>
-            <repeatable>true</repeatable>
-            <required />
-            <hint>Enter the names of the supervisor(s) or advisor(s) in the form Surname, Firstname.</hint>
-        </field>
-    </row>
-    <row>
-        <field>
-            <dc-schema>dc</dc-schema>
-            <dc-element>publisher</dc-element>
-            <label>Publisher</label>
-            <input-type>onebox</input-type>
-            <repeatable>true</repeatable>
-            <required />
-            <hint>The publisher or publishers of this publication</hint>
-        </field>
-    </row>
-    <row>
-        <field>
-            <dc-schema>dc</dc-schema>
-            <dc-element>date</dc-element>
-            <dc-qualifier>issued</dc-qualifier>
-            <label>Date of Issue</label>
-            <input-type>date</input-type>
-            <repeatable>false</repeatable>
-            <required>You must enter at least the year.</required>
-            <hint>Please give the date of previous publication or public distribution.</hint>
-        </field>
-    </row>
-    <row>
-        <field>
-            <dc-schema>dc</dc-schema>
-            <dc-element>type</dc-element>
-            <label>Type</label>
-            <input-type>onebox</input-type>
-            <repeatable>false</repeatable>
-            <required>You must select a publication type</required>
-            <hint>Select the type(s) of content of the item.</hint>
-            <vocabulary>publication-coar-types</vocabulary>
-        </field>
-    </row>
-
-    <!-- NEW FIELDS ADDED HERE (Basic Information) -->
-    <row>
-        <field>
-            <dc-schema>dc</dc-schema>
-            <dc-element>language</dc-element>
-            <dc-qualifier>iso</dc-qualifier>
-            <label>Language</label>
-            <input-type value-pairs-name="common_iso_languages">dropdown</input-type>
-            <repeatable>false</repeatable>
-            <required />
-            <hint>Select the language of the main content of the item.</hint>
-        </field>
-    </row>
-    <row>
+      <row>
         <field>
           <dc-schema>dc</dc-schema>
-          <dc-element>subject</dc-element>
-          <label>Subject Keywords</label>
-          <input-type>tag</input-type>
+          <dc-element>identifier</dc-element>
+          <label>Identifiers</label>
+          <input-type value-pairs-name="common_identifiers">qualdrop_value</input-type>
           <repeatable>true</repeatable>
           <required />
-          <hint>Type the appropriate keyword or phrase and press Enter to add it.</hint>
-  </field>
-  </row>
-    <row>
-        <field>
-            <dc-schema>dc</dc-schema>
-            <dc-element>description</dc-element>
-            <dc-qualifier>abstract</dc-qualifier>
-            <label>Abstract</label>
-            <input-type>textarea</input-type>
-            <repeatable>false</repeatable>
-            <required />
-            <hint>Enter the abstract of the item.</hint>
+          <hint>If the item has any identification numbers or codes associated with
+            it, please enter the types and the actual numbers or codes.</hint>
         </field>
-    </row>
-    <row>
+      </row>
+      <row>
         <field>
-            <dc-schema>dc</dc-schema>
-            <dc-element>description</dc-element>
-            <label>Description</label>
-            <input-type>textarea</input-type>
-            <repeatable>false</repeatable>
-            <required />
-            <hint>Any additional description or notes.</hint>
+          <dc-schema>dc</dc-schema>
+          <dc-element>title</dc-element>
+          <label>Title</label>
+          <input-type>onebox</input-type>
+          <repeatable>false</repeatable>
+          <required>You must enter a main title for this item.</required>
+          <hint>Enter the main title of the item.</hint>
         </field>
-</row>
-   </form>
+      </row>
+      <row>
+        <field>
+          <dc-schema>dc</dc-schema>
+          <dc-element>title</dc-element>
+          <dc-qualifier>alternative</dc-qualifier>
+          <label>Other Titles</label>
+          <input-type>onebox</input-type>
+          <repeatable>true</repeatable>
+          <required />
+          <hint>If the item has any alternative titles, please enter them here.</hint>
+        </field>
+      </row>
+      <row>
+        <field>
+          <dc-schema>dc</dc-schema>
+          <dc-element>date</dc-element>
+          <dc-qualifier>issued</dc-qualifier>
+          <label>Date of Issue</label>
+          <input-type>date</input-type>
+          <repeatable>false</repeatable>
+          <required>You must enter at least the year.</required>
+          <hint>Please give the date of previous publication or public distribution.
+            You can leave out the day and/or month if they aren't
+            applicable.</hint>
+        </field>
+      </row>
+      <row>
+        <field>
+          <dc-schema>dc</dc-schema>
+          <dc-element>contributor</dc-element>
+          <dc-qualifier>author</dc-qualifier>
+          <label>Authors</label>
+          <input-type>group</input-type>
+          <repeatable>true</repeatable>
+          <required />
+          <hint>Enter the names of the authors of this item.</hint>
+        </field>
+      </row>
+      <row>
+        <field>
+          <dc-schema>dc</dc-schema>
+          <dc-element>contributor</dc-element>
+          <dc-qualifier>editor</dc-qualifier>
+          <label>Editors</label>
+          <input-type>group</input-type>
+          <repeatable>true</repeatable>
+          <required />
+          <hint>The editors of this publication.</hint>
+        </field>
+      </row>
+      <row>
+        <field>
+          <dc-schema>dc</dc-schema>
+          <dc-element>type</dc-element>
+          <label>Type</label>
+          <input-type>onebox</input-type>
+          <repeatable>false</repeatable>
+          <required>You must select a publication type</required>
+          <hint>Select the type(s) of content of the item.</hint>
+          <vocabulary>publication-coar-types</vocabulary>
+        </field>
+      </row>
+    </form>
     <form name="publication_indexing">
       <row>
         <field>
@@ -672,7 +604,7 @@
           <hint>Select the language of the main content of the item. If the language does not appear in the list, please select 'Other'.  If the content does not really have a language (for example, if it is a dataset or an image) please select 'N/A'.</hint>
         </field>
       </row>
-         <row>
+      <row>
         <field>
           <dc-schema>dc</dc-schema>
           <dc-element>subject</dc-element>
@@ -680,9 +612,9 @@
           <input-type>tag</input-type>
           <repeatable>true</repeatable>
           <required />
-          <hint>Enter appropriate subject keywords or phrases.</hint>
+          <hint>Type the appropriate keyword or phrase and press Enter to add it.</hint>
         </field>
-      </row> 
+      </row>
       <row>
         <field>
           <dc-schema>datacite</dc-schema>
@@ -710,7 +642,7 @@
       </row>
     </form>
     <form name="publication_bibliographic_details">
-     <row>
+      <row>
         <field>
           <dc-schema>dc</dc-schema>
           <dc-element>publisher</dc-element>
@@ -979,7 +911,7 @@
           <repeatable>true</repeatable>
           <required />
           <hint>If the item has any identification numbers or codes associated with
-it, please enter the types and the actual numbers or codes.</hint>
+            it, please enter the types and the actual numbers or codes.</hint>
         </field>
       </row>
       <row>
@@ -3228,10 +3160,10 @@ it, please enter the types and the actual numbers or codes.</hint>
         <displayed-value>Archive</displayed-value>
         <stored-value>Archive</stored-value>
       </pair>
-        <pair>
-         <displayed-value>Nonprofit</displayed-value>
-         <stored-value>Nonprofit</stored-value>
-        </pair>
+      <pair>
+        <displayed-value>Nonprofit</displayed-value>
+        <stored-value>Nonprofit</stored-value>
+      </pair>
       <pair>
         <displayed-value>Funder</displayed-value>
         <stored-value>Funder</stored-value>
@@ -3240,10 +3172,10 @@ it, please enter the types and the actual numbers or codes.</hint>
         <displayed-value>Facility</displayed-value>
         <stored-value>Facility</stored-value>
       </pair>
-        <pair>
-         <displayed-value>Other</displayed-value>
-         <stored-value>Other</stored-value>
-        </pair>
+      <pair>
+        <displayed-value>Other</displayed-value>
+        <stored-value>Other</stored-value>
+      </pair>
     </value-pairs>
     <value-pairs value-pairs-name="project_types" dc-term="project_types">
       <pair>
