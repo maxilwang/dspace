@@ -571,7 +571,7 @@
           <dc-schema>dc</dc-schema>
           <dc-element>contributor</dc-element>
           <dc-qualifier>editor</dc-qualifier>
-          <label>Editors</label>
+          <label>Supervisor</label>
           <input-type>group</input-type>
           <repeatable>true</repeatable>
           <required />
